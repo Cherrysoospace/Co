@@ -1,0 +1,43 @@
+### Prueba inicial
+
+@url = http://localhost:7070
+
+GET {{url}}
+
+###LISTAR TODOS LOS SOCIOS ------->
+GET {{url}}/socio
+
+
+###LISTAR UN SOCIO SEGUN SU INDICE
+GET {{url}}/socio/indice/2
+
+### LISTAR UN SOCIO SEGUN SU ID
+
+GET {{url}}/socio/id/S0020
+
+###
+GET {{url}}/alquiler/indice/1
+
+
+### AGREGAR UN CLIENTE ------>
+POST {{url}}/socio
+Content-Type: application/json; charset=utf-8
+
+{
+    "direccion": "Calle 72 #10-15, Bogotá D.C.",
+    "telefono": "310 456 7890",
+    "nombre": "Laura Rodríguez"
+}
+
+### ACTUALIZAR
+
+PATCH {{url}}/socio/Z1FAT
+Content-Type: application/json; charset=utf-8
+
+{
+    "nombre": "Marco Aurelio",
+    "direccion": "Calle 22 #10-15, Bogotá D.C.",
+}
+
+### ELIMINAR UN SOCIO DADO SU ID
+DELETE {{url}}/socio/ABC11
