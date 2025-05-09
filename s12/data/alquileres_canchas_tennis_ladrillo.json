@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "alquileres": [{
+                "horas": 2,
+                "instalacionDeportiva": {
+                    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+                    "area": 14.19,
+                    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+                    "ancho": 3.3,
+                    "valorHora": 7000,
+                    "largo": 4.3,
+                    "id": "MONZA",
+                    "tipoCancha": "LADRILLO"
+                },
+                "socio": {
+                    "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca",
+                    "id": "PQQD6",
+                    "telefono": "315 445 6783",
+                    "nombre": "Haymitch Albernathy"
+                },
+                "valorAlquiler": 14000,
+                "fechaHoraInicio": "2025-04-01T12:00",
+                "id": "ZX1V2",
+                "fechaHoraFin": "2025-04-01T14:00"
+            }],
+            "cancha": {
+                "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+                "area": 14.19,
+                "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+                "ancho": 3.3,
+                "valorHora": 7000,
+                "largo": 4.3,
+                "id": "MONZA",
+                "tipoCancha": "LADRILLO"
+            }
+        },
+        {
+            "alquileres": [{
+                "horas": 4,
+                "instalacionDeportiva": {
+                    "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
+                    "area": 264,
+                    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+                    "ancho": 11,
+                    "valorHora": 7000,
+                    "largo": 24,
+                    "id": "OGCF8",
+                    "tipoCancha": "LADRILLO"
+                },
+                "socio": {
+                    "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+                    "id": "ABC22",
+                    "telefono": "3007896541",
+                    "nombre": "John D. Carmack"
+                },
+                "valorAlquiler": 28000,
+                "fechaHoraInicio": "2025-04-01T13:00",
+                "id": "ICUVP",
+                "fechaHoraFin": "2025-04-01T17:00"
+            }],
+            "cancha": {
+                "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
+                "area": 264,
+                "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+                "ancho": 11,
+                "valorHora": 7000,
+                "largo": 24,
+                "id": "OGCF8",
+                "tipoCancha": "LADRILLO"
+            }
+        }
+    ],
+    "size": 2,
+    "message": "Alquileres de canchas Tennis de Ladrillo obtenidos con éxito"
+}

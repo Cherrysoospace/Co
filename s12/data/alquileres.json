@@ -1,0 +1,117 @@
+[
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 14.19,
+      "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+      "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+      "ancho": 3.3,
+      "largo": 4.3,
+      "valorHora": 7000,
+      "id": "MONZA",
+      "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+      "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca",
+      "id": "PQQD6",
+      "telefono": "315 445 6783",
+      "nombre": "Haymitch Albernathy"
+    },
+    "valorAlquiler": 14000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "ZX1V2",
+    "fechaHoraFin": "2025-04-01T14:00"
+  },
+  {
+    "horas": 2,
+    "instalacionDeportiva": {
+      "area": 600,
+      "descripcion": "Cancha escolar de uso mixto al aire libre",
+      "graderia": false,
+      "tipoInstalacion": "Cancha multipróposito",
+      "ancho": 15,
+      "largo": 40,
+      "valorHora": 5000,
+      "id": "VJ4CW"
+    },
+    "socio": {
+      "direccion": "Calle 72 #10-15, Bogotá D.C.",
+      "id": "S0020",
+      "telefono": "310 456 7890",
+      "nombre": "Laura Rodríguez"
+    },
+    "valorAlquiler": 10000,
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "id": "2CRI1",
+    "fechaHoraFin": "2025-04-01T14:00"
+  },
+  {
+    "horas": 4,
+    "instalacionDeportiva": {
+      "area": 406,
+      "descripcion": "Piscina semiolímpica para entrenamientos de equipos de al menos 3 personas",
+      "tipoInstalacion": "Pisicina Olímpica",
+      "ancho": 14,
+      "largo": 29,
+      "valorHora": 15000,
+      "id": "LRDTT",
+      "olimpica": true
+    },
+    "socio": {
+      "direccion": "Calle 40 #18-90",
+      "id": "00TTL",
+      "telefono": "316 334 5567",
+      "nombre": "Daniela López"
+    },
+    "valorAlquiler": 60000,
+    "fechaHoraInicio": "2025-05-01T10:00",
+    "id": "H4FCM",
+    "fechaHoraFin": "2025-05-01T14:00"
+  },
+  {
+    "horas": 4,
+    "instalacionDeportiva": {
+      "area": 6,
+      "descripcion": "Piscina no Olimpica sencilla para tardes familiares.",
+      "tipoInstalacion": "Piscina no Olímpica",
+      "ancho": 2,
+      "largo": 3,
+      "valorHora": 15000,
+      "id": "0U4SL",
+      "olimpica": false
+    },
+    "socio": {
+      "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+      "id": "ABC22",
+      "telefono": "3007896541",
+      "nombre": "John D. Carmack"
+    },
+    "valorAlquiler": 60000,
+    "fechaHoraInicio": "2025-04-13T13:00",
+    "id": "LGWGJ",
+    "fechaHoraFin": "2025-04-13T17:00"
+  },
+  {
+    "horas": 4,
+    "instalacionDeportiva": {
+      "area": 264,
+      "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
+      "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+      "ancho": 11,
+      "largo": 24,
+      "valorHora": 7000,
+      "id": "OGCF8",
+      "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+      "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+      "id": "ABC22",
+      "telefono": "3007896541",
+      "nombre": "John D. Carmack"
+    },
+    "valorAlquiler": 28000,
+    "fechaHoraInicio": "2025-04-01T13:00",
+    "id": "ICUVP",
+    "fechaHoraFin": "2025-04-01T17:00"
+  }
+]

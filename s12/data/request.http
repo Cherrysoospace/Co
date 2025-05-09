@@ -1,0 +1,339 @@
+###
+@url = http://localhost:7070
+
+### PRUEBAS GET ALL ----------->
+### TODAS LAS INSTALACIONES UNIFICADAS
+GET {{url}}/canchas/todas
+
+###ALQUILER PARA PISCINAS OLIMPICAS
+GET {{url}}/alquiler/piscinasolimpicas
+
+### PRUEBA GET ALL SOCIO
+GET {{url}}/socio 
+
+### PRUEBA GET ALL PISCINA
+GET {{url}}/piscina
+
+### PRUEBA GET ALL CANCHA TENNIS
+GET {{url}}/canchatennis
+
+### TAMBIEN GET PARA TIPOS DE CANCHAS TENNIS
+GET {{url}}/canchas/tipos
+
+### PRUEBA GET ALL CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito
+
+### PRUEBA GET ALL ALQUILER
+GET {{url}}/alquiler
+
+
+### PRUEBAS GET CON INDICE -------------------------->
+### PRUEBA PARA SOCIO (CONTEO INICIA A PARTIR DE 0)
+GET {{url}}/socio/indice/1
+
+### PRUEBA PARA PISCINA
+GET {{url}}/piscina/indice/3
+
+### PRUEBA PARA CANCHA TENNIS
+GET {{url}}/canchatennis/indice/4
+
+### PRUEBA PARA CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/indice/5
+
+### PRUEBA PARA ALQUILER
+GET {{url}}/alquiler/indice/0
+
+
+### PRUEBAS CON GET ITEM ------------------------------------>
+### PRUEBA PARA SOCIO (SE HACE SIN EL /id... porque genera error)
+GET {{url}}/socio/id/S0020
+
+### PRUEBA PARA PISCINA
+GET {{url}}/piscina/id/LRDTT
+
+### PRUEBA PARA CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/id/T40M5
+
+### PRUEBA PARA CANCHA TENNIS
+GET {{url}}/canchatennis/id/AFT45
+
+### PRUEBA PARA ALQUILER
+GET {{url}}/alquiler/id/ZX1V2
+
+### PRUEBAS DE CONTEO -------------------->
+### SOCIO-'.
+GET {{url}}/socio/conteo 
+
+### PISCINA
+GET {{url}}/piscina/conteo 
+
+### CANCHA TENNIS
+GET {{url}}/canchatennis/conteo
+
+### CANCHA MULTIPROPOSITO
+GET {{url}}/canchamultiproposito/conteo
+
+### ALQUILERES
+GET {{url}}/alquiler/conteo
+
+
+### PRUEBAS POST ------------------------------->
+#PRUEBAS POST PARA SOCIO SIN ID
+POST {{url}}/socio
+Content-Type: application/json; charset=utf-8
+
+{
+    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "telefono": "315 445 6783",
+    "nombre": "Jaime Alberto Rodríguez"
+}
+
+### PRUEBAS POST INSTALACION PISCINA SIN VALOR HORA E ID
+POST {{url}}/piscina
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Piscina no olímpica para entrenamiento general",
+    "ancho": 10,
+    "largo": 12,
+    "olimpica": true
+}
+
+### PRUEBAS POST INSTALACION CANCHA TENNIS SIN VALOR HORA E ID
+POST {{url}}/canchatennis
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha Tennis con superficie de ladrillo, perfecta para entrenamientos de corta duración.",
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 2.5,
+    "largo": 4.5,
+    "tipoCancha": "LADRILLO"
+}
+
+### PRUEBAS POST INSTALACION CANCHA MULTITPROPOSITO SIN VALOR HORA E ID
+POST {{url}}/canchamultiproposito
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha Multipropósito inspirada en el Monaco GP en el Campeonato F1 1984 ",
+    "graderia": true,
+    "tipoInstalacion": "Cancha multipróposito: con gradería",
+    "ancho": 2,
+    "largo": 3.1
+}
+
+
+### PRUEBAS POST PARA ALQUILER
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva": {
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
+    "valorHora": 7000,
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+    "direccion": "Calle 21 #11-03, Buga, Valle del Cuaca",
+    "id": "PQQD6",
+    "telefono": "315 445 6783",
+    "nombre": "Jaime Alberto Rodríguez"
+  },
+    "fechaHoraInicio": "2025-04-01T12:00",
+    "fechaHoraFin": "2025-04-01T14:00"
+}
+
+### PRUEBA 2.0
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "fechaHoraInicio": "2025-05-01T10:00",
+    "fechaHoraFin": "2025-05-01T14:00",
+    "socio": "00TTL",
+    "instalacionDeportiva": "LRDTT"
+}
+
+
+### PRUEBAS PATCH ----------->
+###PATCH PARA SOCIO NO REFERENCIADO
+PATCH {{url}}/socio/ABC22
+Content-Type: application/json; charset=utf-8
+
+{
+    "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+    "nombre": "John D. Carmack"
+}
+
+### PATCH SOCIO REFERENCIADO
+PATCH {{url}}/socio/PQQD6
+Content-Type: application/json; charset=utf-8
+
+{
+    "nombre": "Haymitch Albernathy",
+    "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca"
+}
+
+### PATCH INSTALACION REFERENCIADA
+PATCH {{url}}/canchamultiproposito/VJ4CW
+Content-Type: application/json; charset=utf-8
+
+{
+   "largo": 40,
+   "ancho": 15
+}
+
+### PATCH INSTALACION REFERENCIADA 2.0
+PATCH {{url}}/piscina/LRDTT
+Content-Type: application/json; charset=utf-8
+
+{
+   "descripcion": "Piscina semiolímpica para entrenamientos de equipos de al menos 3 personas"
+}
+
+### PATCH INSTALACION NO REFERENCIADA
+PATCH {{url}}/piscina/Y1O42
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Piscina Olímpica sencilla para entrenamientos de corta duración."
+}
+
+###PACTCH PARA CANCHA TENNIS
+PATCH {{url}}/canchatennis/EI43R
+Content-Type: application/json; charset=utf-8
+
+{
+    "descripcion": "Cancha profesional de tennis en tierra batida"
+}
+
+### PATCH PARA ALQUILER
+PATCH {{url}}/alquiler/H4FCM
+Content-Type: application/json; charset=utf-8
+
+{
+    "fechaHoraFin": "2025-05-01T14:00"
+}
+
+### PRUEBAS DELETE ---------->
+##DELETE PARA SOCIO NO REFERENCIADO
+DELETE {{url}}/socio/S0011
+
+### DELETE PARA PISCINA NO REFERENCIADA
+DELETE {{url}}/piscina/SET56
+
+### DELETE PARA CANCHA TENNIS NO REFERENCIADA
+DELETE {{url}}/canchatennis/IOHH4
+
+### DELETE PARA CANCHA MULTIPROPOSITO NO REFERENCIADA
+DELETE {{url}}/canchamultiproposito/1GE20
+
+###DELETE PARA ALQUILER
+DELETE {{url}}/alquiler/YDVQG
+
+
+### DELETE PARA REFERENCIADOS --------------------->
+### PRUEBA DELETE PARA SOCIO REFERENCIADO
+DELETE {{url}}/socio/PQQD6
+
+### PRUEBA DELETE PARA INSTALACION REFERENCIADA 
+DELETE {{url}}/canchamultiproposito/VJ4CW
+
+
+### PRUEBA DE CRUCE DE HORARIOS :d
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva": {
+    "descripcion": "Cancha de tennis en ladrillo inspirada en el iconico circuito de Monza",
+    "area": 15.299999999999999,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 3.4,
+    "valorHora": 7000,
+    "largo": 4.5,
+    "id": "MONZA",
+    "tipoCancha": "LADRILLO"
+    },
+    "socio": {
+    "direccion": "Cra 9 #45-67",
+    "id": "ABC22",
+    "telefono": "3007896541",
+    "nombre": "Laura Mejía"
+  },
+    "fechaHoraInicio": "2025-04-01T13:00",
+    "fechaHoraFin": "2025-04-01T17:00"
+}
+
+###POST ALQUILER PARA PISCINA NO OLIMPICA
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva": {
+    "descripcion": "Piscina no Olimpica sencilla para tardes familiares.",
+    "area": 6,
+    "tipoInstalacion": "Piscina no Olímpica",
+    "ancho": 2,
+    "valorHora": 15000,
+    "largo": 3,
+    "id": "0U4SL",
+    "olimpica": false
+  },
+    "socio": {
+    "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+    "id": "ABC22",
+    "telefono": "3007896541",
+    "nombre": "John D. Carmack"
+  },
+    "fechaHoraInicio": "2025-04-13T13:00",
+    "fechaHoraFin": "2025-04-13T17:00"
+}
+
+###PISCINA NO OLIMPICA POST
+POST {{url}}/piscina
+Content-Type: application/json; charset=utf-8
+
+{
+    "area": 4.5,
+    "descripcion": "Piscina no Olimpica sencilla para tardes familiares.",
+    "tipoInstalacion": "Pisicina no Olímpica",
+    "ancho": 2.0,
+    "largo": 3.0,
+    "olimpica": false
+  }
+
+###Prueba Parcial
+GET {{url}}/alquiler/canchastennisladrillo
+
+###
+POST {{url}}/alquiler
+Content-Type: application/json; charset=utf-8
+
+{
+    "instalacionDeportiva":{
+    "descripcion": "Cancha de entrenamiento con superficie de ladrillo",
+    "area": 264,
+    "tipoInstalacion": "Tipo: Cancha de tenis en ladrillo",
+    "ancho": 11,
+    "valorHora": 7000,
+    "largo": 24,
+    "id": "OGCF8",
+    "tipoCancha": "LADRILLO"
+  },
+    "socio": {
+    "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+    "id": "ABC22",
+    "telefono": "3007896541",
+    "nombre": "John D. Carmack"
+  },
+    "fechaHoraInicio": "2025-04-01T13:00",
+    "fechaHoraFin": "2025-04-01T17:00"
+}
+

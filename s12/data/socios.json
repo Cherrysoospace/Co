@@ -1,0 +1,32 @@
+[
+  {
+    "direccion": "Calle 72 #10-15, Bogotá D.C.",
+    "id": "S0020",
+    "telefono": "310 456 7890",
+    "nombre": "Laura Rodríguez"
+  },
+  {
+    "direccion": "Calle 40 #18-90, Barranquilla, Atlántico",
+    "id": "S0024",
+    "telefono": "316 334 5567",
+    "nombre": "Daniela López"
+  },
+  {
+    "direccion": "Cra 12 #15-06, Dallas, Texas, Estados Unidos",
+    "id": "ABC22",
+    "telefono": "3007896541",
+    "nombre": "John D. Carmack"
+  },
+  {
+    "direccion": "Calle 40 #18-90",
+    "id": "00TTL",
+    "telefono": "316 334 5567",
+    "nombre": "Daniela López"
+  },
+  {
+    "direccion": "Calle 21 #11-03, Cali, Valle del Cuaca",
+    "id": "PQQD6",
+    "telefono": "315 445 6783",
+    "nombre": "Haymitch Albernathy"
+  }
+]
